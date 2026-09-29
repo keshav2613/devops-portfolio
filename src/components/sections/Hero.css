@@ -1,0 +1,530 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  min-height: auto;
+
+  display: flex;
+  align-items: center;
+
+  padding: 48px 0 72px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(241, 247, 253, 0.78)
+  );
+}
+
+.hero__glow {
+  position: absolute;
+
+  border-radius: 999px;
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.hero__glow--one {
+  width: 520px;
+  height: 520px;
+
+  top: -260px;
+  right: -150px;
+
+  background: rgba(72, 157, 255, 0.12);
+}
+
+.hero__glow--two {
+  width: 400px;
+  height: 400px;
+
+  bottom: -270px;
+  left: -150px;
+
+  background: rgba(55, 198, 178, 0.08);
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(390px, 0.95fr);
+
+  align-items: center;
+
+  gap: clamp(50px, 8vw, 110px);
+}
+
+.hero__content {
+  max-width: 700px;
+}
+
+.hero__eyebrow {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+  padding: 8px 12px;
+
+  border: 1px solid #cfe2f7;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: #38608a;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero__availability-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--color-success);
+
+  box-shadow:
+    0 0 0 4px rgba(12, 155, 119, 0.1);
+}
+
+.hero h1 {
+  max-width: 650px;
+
+  margin-bottom: 22px;
+
+  color: var(--color-heading);
+
+  font-size: clamp(3.1rem, 5vw, 5rem);
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+
+.hero h1 span {
+  color: var(--color-primary);
+}
+
+.hero__intro {
+  max-width: 620px;
+
+  margin-bottom: 22px;
+
+  color: #4c5972;
+
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.hero__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--color-muted);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.hero__meta svg {
+  color: var(--color-primary);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+
+  margin-bottom: 38px;
+}
+
+.hero__note {
+  position: relative;
+
+  max-width: 360px;
+
+  padding-left: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  border-left: 2px solid #bcd8f5;
+}
+
+.hero__note > span {
+  color: var(--color-muted);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero__note strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--color-heading);
+}
+
+.hero__note-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--color-development);
+}
+
+.hero__note small {
+  color: var(--color-muted);
+}
+
+/* ---------------------------------------
+   Dublin card
+--------------------------------------- */
+
+.hero__visual {
+  position: relative;
+}
+
+.hero__ireland-card {
+  position: relative;
+
+  padding: 18px;
+
+  border: 1px solid rgba(186, 211, 236, 0.95);
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  box-shadow:
+    0 30px 70px rgba(42, 82, 130, 0.13),
+    0 2px 6px rgba(42, 82, 130, 0.04);
+
+  backdrop-filter: blur(18px);
+
+  transform: rotate(0.8deg);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.hero__ireland-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+
+  box-shadow:
+    0 38px 85px rgba(42, 82, 130, 0.17),
+    0 2px 6px rgba(42, 82, 130, 0.05);
+}
+
+.hero__ireland-top {
+  padding: 0 2px 14px;
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.hero__ireland-label,
+.hero__ireland-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.hero__ireland-label {
+  color: var(--color-heading);
+}
+
+.hero__ireland-label svg {
+  color: var(--color-primary);
+}
+
+.hero__ireland-status {
+  color: var(--color-success);
+}
+
+.hero__ireland-status > span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--color-success);
+
+  box-shadow:
+    0 0 0 4px rgba(12, 155, 119, 0.09);
+}
+
+/* ---------------------------------------
+   Dublin photograph
+--------------------------------------- */
+
+.hero__scene {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 310px;
+
+  border-radius: 18px;
+
+  background: #dceaf6;
+}
+
+.hero__dublin-image {
+  width: 100%;
+  height: 310px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 700ms ease;
+}
+
+.hero__ireland-card:hover .hero__dublin-image {
+  transform: scale(1.035);
+}
+
+.hero__image-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(10, 28, 50, 0.32) 100%
+  );
+
+  pointer-events: none;
+}
+
+.hero__scene-caption {
+  position: absolute;
+
+  left: 16px;
+  bottom: 14px;
+
+  padding: 6px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  color: #285a81;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  backdrop-filter: blur(8px);
+}
+
+/* ---------------------------------------
+   Technology strip
+--------------------------------------- */
+
+.hero__systems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  padding-top: 12px;
+}
+
+.hero__systems > div {
+  min-width: 0;
+
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  background: #fbfdff;
+
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.hero__systems > div:hover {
+  transform: translateY(-2px);
+
+  border-color: #b8d8f7;
+
+  background: #ffffff;
+}
+
+.hero__systems svg {
+  flex: 0 0 auto;
+
+  color: var(--color-primary);
+}
+
+.hero__systems span {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__systems small {
+  color: var(--color-muted);
+
+  font-size: 0.58rem;
+}
+
+.hero__systems strong {
+  overflow: hidden;
+
+  color: var(--color-heading);
+
+  font-size: 0.69rem;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------
+   Human touch
+--------------------------------------- */
+
+.hero__handwritten {
+  position: absolute;
+
+  right: -12px;
+  bottom: -39px;
+
+  color: #6384a6;
+
+  font-family:
+    "Segoe Print",
+    "Bradley Hand",
+    cursive;
+
+  font-size: 0.83rem;
+
+  transform: rotate(-3deg);
+}
+
+/* ---------------------------------------
+   Tablet
+--------------------------------------- */
+
+@media (max-width: 960px) {
+  .hero {
+    min-height: auto;
+
+    padding: 80px 0 100px;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__content {
+    max-width: 760px;
+  }
+
+  .hero__visual {
+    width: min(100%, 620px);
+  }
+}
+
+/* ---------------------------------------
+   Mobile
+--------------------------------------- */
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 58px;
+    padding-bottom: 82px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.75rem, 14vw, 4rem);
+  }
+
+  .hero__intro {
+    line-height: 1.7;
+  }
+
+  .hero__meta {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero__actions .button {
+    width: 100%;
+  }
+
+  .hero__ireland-card {
+    padding: 13px;
+
+    border-radius: 20px;
+
+    transform: none;
+  }
+
+  .hero__ireland-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .hero__scene {
+    min-height: 240px;
+  }
+
+  .hero__dublin-image {
+    height: 240px;
+  }
+
+  .hero__systems {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__handwritten {
+    right: 10px;
+    bottom: -34px;
+  }
+}

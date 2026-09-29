@@ -1,0 +1,126 @@
+.projects {
+  position: relative;
+
+  background: #ffffff;
+
+  border-top: 1px solid rgba(219, 231, 243, 0.72);
+}
+
+.projects__heading {
+  margin-bottom: 34px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.projects__eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects__heading h2 {
+  margin-bottom: 8px;
+
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  letter-spacing: -0.04em;
+}
+
+.projects__heading p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: var(--color-muted);
+}
+
+.projects__github-link {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  transition:
+    gap var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.projects__github-link:hover {
+  gap: 10px;
+
+  color: var(--color-primary-dark);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.projects__note {
+  width: fit-content;
+
+  margin: 28px auto 0;
+
+  color: #71839a;
+
+  font-family:
+    "Segoe Print",
+    "Bradley Hand",
+    cursive;
+
+  font-size: 0.75rem;
+
+  transform: rotate(-1deg);
+}
+
+@media (max-width: 1000px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card:last-child {
+    grid-column: 1 / -1;
+
+    width: min(100%, 580px);
+  }
+}
+
+@media (max-width: 680px) {
+  .projects__heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .projects__note {
+    text-align: center;
+  }
+}
