@@ -39,7 +39,7 @@ export const projects: Project[] = [
     ],
     githubUrl:
       "https://github.com/keshav2613/CloudSpend-Guard",
-    caseStudyUrl: "#cloudspend-guard",
+    caseStudyUrl: "/projects/cloudspend-guard",
   },
   {
     id: "kubediagnose",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     ],
     githubUrl:
       "https://github.com/keshav2613/kubediagnose",
-    caseStudyUrl: "#kubediagnose",
+    caseStudyUrl: "/projects/kubediagnose",
   },
   {
     id: "telemetry-lab",

@@ -7,10 +7,11 @@ import "./Navbar.css";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Credentials", href: "#credentials" },
+  { label: "Contact", href: "#contact" },
 ];
 
 function Navbar() {
@@ -19,7 +20,8 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar__inner">
-        <a className="navbar__brand" href="#" aria-label="Home">
+        {/* Brand */}
+        <a className="navbar__brand" href="#" aria-label="Keshav Singh home">
           <span className="navbar__brand-mark">KS</span>
 
           <span className="navbar__brand-text">
@@ -28,6 +30,7 @@ function Navbar() {
           </span>
         </a>
 
+        {/* Desktop navigation */}
         <nav className="navbar__links" aria-label="Primary navigation">
           {navItems.map((item) => (
             <a key={item.href} href={item.href}>
@@ -36,13 +39,14 @@ function Navbar() {
           ))}
         </nav>
 
+        {/* Desktop actions */}
         <div className="navbar__actions">
           <a
             className="navbar__github"
             href="https://github.com/keshav2613"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub profile"
+            aria-label="Keshav Singh GitHub profile"
           >
             <GitHubIcon size={19} />
           </a>
@@ -50,12 +54,14 @@ function Navbar() {
           <a
             className="button button--primary navbar__resume"
             href="/resume/Keshav-Singh-Resume.pdf"
+            download="Keshav-Singh-Resume.pdf"
           >
             <Download size={17} />
             Resume
           </a>
         </div>
 
+        {/* Mobile menu button */}
         <button
           className="navbar__menu-button"
           type="button"
@@ -67,6 +73,7 @@ function Navbar() {
         </button>
       </div>
 
+      {/* Mobile navigation */}
       {menuOpen && (
         <nav className="navbar__mobile" aria-label="Mobile navigation">
           <div className="container">
@@ -84,11 +91,16 @@ function Navbar() {
               href="https://github.com/keshav2613"
               target="_blank"
               rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
             >
               GitHub
             </a>
 
-            <a href="/resume/Keshav-Singh-Resume.pdf">
+            <a
+              href="/resume/Keshav-Singh-Resume.pdf"
+              download="Keshav-Singh-Resume.pdf"
+              onClick={() => setMenuOpen(false)}
+            >
               Download Resume
             </a>
           </div>
