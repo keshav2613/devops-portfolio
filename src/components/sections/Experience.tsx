@@ -46,7 +46,7 @@ const experiences = [
     ],
   },
   {
-    period: "Mar 2020 — Aug 2023",
+    period: "Nov 2020 — Mar2023",
     company: "Zensar Technologies",
     role: "Software Engineer",
     location: "Pune, India",
