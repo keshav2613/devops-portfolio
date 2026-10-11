@@ -1,75 +1,35 @@
-# React + TypeScript + Vite
+# Keshav Singh | Cloud & DevOps Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hands-on projects demonstrating AWS infrastructure, Kubernetes troubleshooting, secure CI/CD, cost optimization, and cloud-native observability.
 
-Currently, two official plugins are available:
+## Featured Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### [CloudSpend Guard](https://github.com/keshav2613/cloudspend-guard)
+An AWS cost optimization platform that discovers EC2 instances and EBS volumes, analyzes CloudWatch utilization, and estimates potential savings through a FastAPI API and React dashboard.
 
-## React Compiler
+- **Infrastructure & deployment:** Amazon EKS, Terraform, Helm, Docker, Amazon ECR, and Application Load Balancer.
+- **Secure delivery:** GitHub Actions with AWS OIDC authentication, immutable commit-tagged images, and EKS Pod Identity for workload access to AWS APIs.
+- **Engineering focus:** Reproducible infrastructure, automated validation, and recommendation-only optimization.
+- **Status:** Deployed and validated against real AWS resources; infrastructure intentionally decommissioned after validation to control costs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### [KubeDiagnose](https://github.com/keshav2613/kubediagnose)
+A Python CLI that combines Kubernetes workload state, events, termination details, and logs into evidence-based diagnoses and actionable troubleshooting guidance.
 
-## Expanding the ESLint configuration
+- **Diagnostics:** CrashLoopBackOff, image pull failures, scheduling failures, OOMKilled containers, and probe failures.
+- **Security:** Read-only, namespace-scoped RBAC, a dedicated ServiceAccount, and non-root containers.
+- **Quality & CI/CD:** Reproducible failure labs, pytest, Ruff, Docker smoke tests, and GitHub Actions security checks using pip-audit and Trivy.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### [Telemetry Lab](https://github.com/keshav2613/telemetry-lab)
+An observability and incident analysis lab being developed to explore distributed-system failures by correlating metrics, logs, and traces.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Planned stack:** OpenTelemetry and its Collector, Prometheus, Loki, Tempo, and Grafana.
+- **Planned focus:** Simulated service failures, alert investigation, root-cause analysis, and SLIs/SLOs.
+- **Status:** In development; the repository documents the planned architecture.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Skills Demonstrated
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+AWS · Kubernetes · Terraform · Helm · Docker · GitHub Actions · IAM/OIDC · Python · FastAPI · React/TypeScript · Automated Testing · Security Scanning
 
-```
+Explore each project repository for architecture, implementation details, and available setup instructions.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+[GitHub Profile](https://github.com/keshav2613)
