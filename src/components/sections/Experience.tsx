@@ -14,25 +14,31 @@ const experiences = [
     period: "Jan 2025 — Aug 2026",
     company: "Neosoft Systems & Cloud Services",
     role: "DevOps Engineer",
-    location: "Pune, India",
+    location: "Remote",
+    metrics: [
+      { value: "40%", label: "Less manual release effort" },
+      { value: "3–5", label: "AWS environments" },
+      { value: "8–10 hrs", label: "Saved monthly" },
+      { value: "15+", label: "Services monitored" },
+    ],
     description:
       "Worked across deployment automation, cloud infrastructure, containerized workloads and operational reliability.",
     highlights: [
       {
         icon: Rocket,
-        text: "CI/CD pipelines, release workflows and deployment troubleshooting",
+        text: "Jenkins and GitHub Actions pipelines for build, test and scheduled releases",
       },
       {
         icon: Cloud,
-        text: "AWS infrastructure provisioning and management with Terraform",
+        text: "Provisioned 3–5 AWS environments with Terraform, including EC2, RDS, IAM and VPC",
       },
       {
         icon: ServerCog,
-        text: "Docker and Kubernetes deployments, health checks and configuration",
+        text: "Supported Docker and Kubernetes deployments, probes, resource limits and rolling updates",
       },
       {
         icon: Activity,
-        text: "Infrastructure and application monitoring with CloudWatch, Prometheus and Grafana",
+        text: "Monitored 15+ services using CloudWatch, Prometheus and Grafana; investigated production incidents",
       },
     ],
     technologies: [
@@ -46,12 +52,12 @@ const experiences = [
     ],
   },
   {
-    period: "Nov 2020 — Mar2023",
+    period: "Nov 2020 — Mar 2023",
     company: "Zensar Technologies",
     role: "Software Engineer",
     location: "Pune, India",
     description:
-      "Built and supported CI/CD pipelines, cloud infrastructure, containerized environments and deployment automation.",
+      "Started in Java application development and progressed into CI/CD automation, cloud infrastructure and production support.",
     metrics: [
       {
         value: "25+",
@@ -62,18 +68,14 @@ const experiences = [
         label: "Deployment time",
       },
       {
-        value: "60%",
-        label: "Faster infra setup",
-      },
-      {
-        value: "98%",
-        label: "Deployment success",
+        value: "20+",
+        label: "Services monitored",
       },
     ],
     highlights: [
       {
         icon: Rocket,
-        text: "Designed and maintained CI/CD pipelines for automated application delivery",
+        text: "Designed and maintained 25+ CI/CD pipelines, reducing deployment time from 45 to under 10 minutes",
       },
       {
         icon: Cloud,
@@ -85,7 +87,7 @@ const experiences = [
       },
       {
         icon: Code2,
-        text: "Implemented monitoring, access controls and deployment security practices",
+        text: "Built monitoring for 20+ services and supported IAM, RBAC and deployment security",
       },
     ],
     technologies: [
